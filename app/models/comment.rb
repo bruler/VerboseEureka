@@ -1,7 +1,7 @@
 # comment.rb
 # refer to post.rb for comments
 
-class Comments
+class Comment
   include Mongoid::Document
   include Mongoid::Timestamps
 

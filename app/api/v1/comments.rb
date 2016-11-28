@@ -1,7 +1,7 @@
 # app/api/v1/comments.rb
 module API
   module V1
-    class Comment < Grape::API
+    class Comments < Grape::API
       version 'v1', using: :path, vendor: 'verboseEureka_blog'
 
       # nested resource, so need to add the post namespace
