@@ -2,7 +2,7 @@
 module API
   module V1
     class Posts < Grape::API
-      version 'v1', using :path, vendor: 'verboseEureka_blog'
+      version 'v1', using: :path, vendor: 'verboseEureka_blog'
       resources :posts do
 
         desc 'Returns all posts'

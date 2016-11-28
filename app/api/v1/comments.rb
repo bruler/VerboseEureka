@@ -1,7 +1,7 @@
 # app/api/v1/comments.rb
 module API
   module V1
-    class Comments < Grape::API
+    class Comment < Grape::API
       version 'v1', using: :path, vendor: 'verboseEureka_blog'
 
       # nested resource, so need to add the post namespace
@@ -26,7 +26,7 @@ module API
             })
           end
 
-          desc 'Update a comment'
+          desc 'Update a comment.'
           params do
             requires :id, type: String
             requires :author, type: String
@@ -37,10 +37,10 @@ module API
           put ':id' do
             post = Post.find(params[:post_id])
             post.comments.find(params[:id]).update!({
-              requires :author, type: String
-              requires :email, type: String
-              requires :website, type: String
-              requires :content, type: String
+              author: params[:author],
+              email: params[:email],
+              website: params[:website],
+              content: params[:content]
             })
           end
 

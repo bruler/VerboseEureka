@@ -21,7 +21,7 @@ module API
     end
 
     mount V1::Admin::Posts
-    mount V1::Comments
+    mount V1::Comment
     mount V1::Posts
 
   end
